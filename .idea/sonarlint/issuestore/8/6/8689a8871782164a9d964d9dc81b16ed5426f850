@@ -1,10 +1,0 @@
-
-qpython:S1481"4Replace the unused local variable "params" with "_".(şù†J$6bc8397d-e163-4241-b906-e1f7df636a81
-jpython:S1940Z"-Use the opposite operator ("is not") instead.(ıÈãtJ$6094a160-e109-48cb-bdf1-a8f4405d1827
-npython:S1172ˆ"/Remove the unused function parameter "request".(Ÿ”¿ºJ$1ae908ce-1960-4c6b-a51c-c9984ee55109
-¥python:S1845ª"aRename method "DATA" to prevent any misunderstanding/clash with method "data" defined on line 218(²ã¹ÅüÿÿÿÿJ$3af29163-14ae-4572-bcd0-ea4bc791a00a
-µpython:S1845Ã"qRename method "QUERY_PARAMS" to prevent any misunderstanding/clash with method "query_params" defined on line 211(ÓÓ¿’ıÿÿÿÿJ$d2e7845b-1306-47d0-8f74-f95b8adbf2d2
-‹python:S100ª"HRename method "DATA" to match the regular expression ^[a-z_][a-z0-9_]*$.(²ã¹ÅüÿÿÿÿJ$082dc0ad-92b9-4454-baf3-fc8c69141a4e
-†python:S100±"HRename method "POST" to match the regular expression ^[a-z_][a-z0-9_]*$.(ãœşJ$1b12062c-5b3b-40b6-9e00-dce93fa0106e
-Œpython:S100º"IRename method "FILES" to match the regular expression ^[a-z_][a-z0-9_]*$.(÷÷ÎúıÿÿÿÿJ$8a7b2908-485c-442d-b4d3-d680abe5f1b0
-“python:S100Ã"PRename method "QUERY_PARAMS" to match the regular expression ^[a-z_][a-z0-9_]*$.(ÓÓ¿’ıÿÿÿÿJ$d15cfeb9-31fb-41dc-9da7-90b91fb8b1e4

@@ -1,6 +1,0 @@
-
-Špython:S1192±"lDefine a constant instead of duplicating this literal "swagger_auto_schema applied twice to method" 3 times.(ŠŠæ²øÿÿÿÿ
-vpython:S107!"ZFunction "swagger_auto_schema" has 17 parameters, which is greater than the 13 authorized.(‹¹Ì®ùÿÿÿÿ
-qpython:S3776!"TRefactor this function to reduce its Cognitive Complexity from 27 to the 15 allowed.(‹¹Ì®ùÿÿÿÿ
-:python:S6660½"Use `not isinstance()` here.(—ÒÛ¾ÿÿÿÿÿ
-rpython:S3776Ü"TRefactor this function to reduce its Cognitive Complexity from 19 to the 15 allowed.(û÷Öøüÿÿÿÿ
