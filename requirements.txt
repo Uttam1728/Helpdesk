@@ -8,7 +8,9 @@ Django==4.2.11
 djangorestframework==3.15.1
 djangorestframework-simplejwt==5.3.1
 drf-yasg==1.21.7
-Flask==3.0.2
+martor==1.6.27
+gunicorn==21.2.0
+#Flask==3.0.2
 importlib_metadata==7.1.0
 inflection==0.5.1
 itsdangerous==2.1.2
@@ -17,7 +19,7 @@ MarkupSafe==2.1.5
 packaging==24.0
 psycopg2-binary==2.9.9
 pycparser==2.21
-pydevd-pycharm==241.14494.200
+#pydevd-pycharm==241.14494.200
 PyJWT==2.8.0
 python-dotenv==1.0.1
 pytz==2024.1
@@ -27,5 +29,4 @@ typing_extensions==4.10.0
 uritemplate==4.1.1
 Werkzeug==3.0.1
 zipp==3.18.1
-martor
-gunicorn
+
