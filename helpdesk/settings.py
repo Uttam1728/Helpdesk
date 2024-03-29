@@ -153,3 +153,5 @@ AUTHENTICATION_BACKENDS = [
 ]
 
 AUTH_USER_MODEL = "user_accounts.Account"
+# Set the STATIC_ROOT setting
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')

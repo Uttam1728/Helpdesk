@@ -1,2 +1,48 @@
+
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+
+# Django development
+*.log
+db.sqlite3
+
+# Static files (collectstatic)
+/staticfiles/
+
+# Media files (user-uploaded content)
+/media/
+
+# Virtual environment
+venv/
 39venv/
+*.idea/
+
+# Compiled Python files
+*.pyc
+
+
+# Ignore secret key settings file
+your_project/settings/secret_key.py
+
+# Ignore database configuration
+your_project/settings/database_config.py
+
+# Ignore IDE-specific files
+.vscode/
 .idea/
+
+# Ignore coverage report files
+.coverage
+
+# Ignore generated documentation
+docs/_build/
+
+# Ignore any local configuration file
+.localconfig
+
+# Ignore macOS metadata files
+.DS_Store
