@@ -1,0 +1,6 @@
+
+¼python:S1192¼"~Define a constant instead of duplicating this literal "Django doesn't provide a DB representation for AnonymousUser." 4 times.(éÖÕ[J$47bf14d5-fa0c-4048-bb1d-fb62bc72401b
+qpython:S1172".Remove the unused function parameter "kwargs".(ğœäÎıÿÿÿÿJ$d95a5cab-2929-4070-ad38-2069e6084616
+qpython:S1172".Remove the unused function parameter "sender".(ğœäÎıÿÿÿÿJ$e77d7afc-3052-456a-a130-9bb74c34e7ef
+£python:S117•"`Rename this local variable "GlobalUserModel" to match the regular expression ^[_a-z][a-z0-9_]*$.(€ÕƒşÿÿÿÿJ$5950c929-38ac-4699-9cb7-87f184b2ff6b
+jpython:S1172Ù"+Remove the unused function parameter "obj".(úâï»J$d03bbf35-556d-480c-b385-f0ce7ad5d324
