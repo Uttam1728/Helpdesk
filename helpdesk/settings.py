@@ -32,6 +32,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['helpdesk-7ad4.onrender.com']
 
+CSRF_TRUSTED_ORIGINS = ['https://helpdesk-7ad4.onrender.com']
 
 # Application definition
 
