@@ -179,7 +179,11 @@ CORS_ALLOW_HEADERS = [
     "x-csrftoken",
     "x-requested-with",
 ]
-
+CORS_ORIGIN_WHITELIST = [
+    'https://helpdesk-7ad4.onrender.com',
+    'http://localhost',  # Allow requests from any port on localhost
+    # Add more origins if needed
+]
 #
 # CSRF_TRUSTED_ORIGINS = [
 #     'http://localhost:3000',
