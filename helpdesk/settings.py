@@ -30,7 +30,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['helpdesk-7ad4.onrender.com']
+ALLOWED_HOSTS = ['localhost', '*', 'helpdesk-7ad4.onrender.com']
 
 CSRF_TRUSTED_ORIGINS = ['https://helpdesk-7ad4.onrender.com']
 
@@ -47,9 +47,11 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt.token_blacklist',
     'user_accounts',
     'drf_yasg',
+'corsheaders',
 ]
 
 MIDDLEWARE = [
+'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -156,3 +158,5 @@ AUTHENTICATION_BACKENDS = [
 AUTH_USER_MODEL = "user_accounts.Account"
 # Set the STATIC_ROOT setting
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# set this
+CORS_ALLOW_ALL_ORIGINS = True
