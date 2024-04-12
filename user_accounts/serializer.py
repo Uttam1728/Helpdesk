@@ -13,20 +13,24 @@ class LoginSerializer(serializers.Serializer):
 
 
 
-class UserRegistrationSerializer(serializers.ModelSerializer):
+class AccountWriteSerializer(serializers.ModelSerializer):
     password = serializers.CharField(write_only=True)
     username = serializers.CharField(read_only=True)
     email = serializers.EmailField(required=True)
 
     class Meta:
         model = Account
-        fields = ['username', 'password', 'email', 'first_name', 'last_name', ]
+        fields = ['id', 'username', 'password', 'email', 'first_name', 'last_name', 'role' ]
+        read_only_fields = ['id']
 
     def validate_email(self, value):
         """
         Validate email field.
         """
-        if Account.objects.filter(email=value).exists():
+        acc_qs = Account.objects.filter(email=value)
+        if self.instance:
+            acc_qs = acc_qs.exclude(pk=self.instance.pk)
+        if acc_qs.exists():
             raise serializers.ValidationError("Email already exists")
         return value
 
@@ -35,14 +39,14 @@ class UserRegistrationSerializer(serializers.ModelSerializer):
         Create a new user.
         """
         validated_data['username'] = validated_data['email']
+        # user = super().create(validated_data)
         user = Account.objects.create_user(**validated_data)
         return user
 
 
-
-class UserReadSerializer(serializers.ModelSerializer):
+class AccountReadSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Account
-        fields = ['username', 'email', 'first_name', 'last_name', 'role']
+        fields = ['id', 'username', 'email', 'first_name', 'last_name', 'role']
         read_only_fields = fields

@@ -23,3 +23,5 @@ class Account(AbstractUser):
             models.UniqueConstraint(fields=['email'], name='unique_email'),  # Add unique constraint to the email field
         ]
     # Other fields and methods...
+
+
