@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from common.models import Category
+from common.models import Category, Message
 
 
 class CategoryReadSerializer(serializers.ModelSerializer):
@@ -24,3 +24,10 @@ class CategoryWriteSerializer(serializers.ModelSerializer):
         model = Category
         fields = ['id', 'category_name', 'answer', 'contact_person', 'parent_category']
         read_only_fields = ['id', ]
+
+
+# serializers.py
+class MessageSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Message
+        fields = ['id', 'sender', 'content', 'timestamp']

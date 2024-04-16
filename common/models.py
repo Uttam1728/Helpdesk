@@ -18,3 +18,20 @@ class Category(models.Model):
 
     def __str__(self):
         return self.category_name
+
+
+class Chat(models.Model):
+    category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    participants = models.ManyToManyField(Account, related_name='chats')
+
+class Message(models.Model):
+    sender = models.ForeignKey(Account, on_delete=models.CASCADE)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='messages')
+    content = models.TextField()
+    timestamp = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['-timestamp']
+
+    def __str__(self):
+        return f"From: {self.sender.first_name}, To: {self.category}, Content: {self.content[:50]}..."

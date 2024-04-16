@@ -37,6 +37,8 @@ CSRF_TRUSTED_ORIGINS = ['https://helpdesk-7ad4.onrender.com']
 # Application definition
 
 INSTALLED_APPS = [
+    'daphne',
+    'channels',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -48,7 +50,8 @@ INSTALLED_APPS = [
     'user_accounts',
     'drf_yasg',
 'corsheaders',
-    'common'
+    'common',
+
 ]
 
 MIDDLEWARE = [
@@ -80,8 +83,8 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'helpdesk.wsgi.application'
-
+# WSGI_APPLICATION = 'helpdesk.wsgi.application'
+ASGI_APPLICATION = 'helpdesk.asgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
@@ -196,3 +199,19 @@ CORS_ORIGIN_WHITELIST = [
 #     'http://127.0.0.1:3000',
 #     'http://127.0.0.1:8000',
 # ]
+
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "channels_redis.core.RedisChannelLayer",
+        "CONFIG": {
+            "hosts": [("127.0.0.1", 6379)],
+        },
+    },
+
+}
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'ushankradadiya1728@gmail.com'
+EMAIL_HOST_PASSWORD = 'jgrfgameqddjodos'
